@@ -1,2 +1,4 @@
 *.wav
 *.png
+__pycache__
+.vscode

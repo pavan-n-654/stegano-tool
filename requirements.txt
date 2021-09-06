@@ -1,0 +1,6 @@
+cryptography==3.4.7
+numpy==1.20.3
+pillow==8.3.1
+base64
+argparse
+os
