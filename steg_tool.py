@@ -62,8 +62,14 @@ elif (args.operation == 'd' or args.operation == 'decode'):
     if args.op_type == "audio":
         decoder = audio(src = args.Spath)
         msg = decoder.Decode()
-        print(decrypt_data(password, msg))
+        try:
+            print(decrypt_data(password, msg))
+        except Exception as e:
+            print("Incorrect password", e)
     elif args.op_type == "image":
         decoder = lsb_text(src = args.Spath)
         msg = decoder.Decode()
-        print(decrypt_data(password, msg))
+        try:
+            print(decrypt_data(password, msg))
+        except Exception as e:
+            print("Incorrect password", e)
