@@ -29,6 +29,7 @@ class audio:
         fp.writeframes(byte_array)
         song.close()
         fp.close()
+        print("Success")
 
     def Decode(self)->str:
         """

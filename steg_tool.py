@@ -47,16 +47,13 @@ if args.operation == "":
     print(">>> Operation is not specified")
     exit()
 if (args.operation == 'e' or args.operation == 'encode'):
-    print("hello")
     if not(is_path_exsits(args.Spath) and str_not_empty(args.msg)):
         exit()
     if (args.op_type == 'audio'):
         encoder = audio(src = args.Spath, dest = args.Tpath, msg = get_data(password, args.msg))
         encoder.Encode()
     elif args.op_type == 'image':
-        print("hey")
         encoder = lsb_text(src = args.Spath, dest = args.Tpath, msg = get_data(password, args.msg))
-        print("hello")
         encoder.Encode()
 elif (args.operation == 'd' or args.operation == 'decode'):
     if not(is_path_exsits(args.Spath)):
