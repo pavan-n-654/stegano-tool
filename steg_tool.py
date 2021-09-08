@@ -4,6 +4,7 @@ import argparse
 from cryptography.fernet import Fernet
 import base64
 import os
+
 def is_path_exsits(file_path):
     if os.path.exists(file_path):
         return True
@@ -41,7 +42,7 @@ parser.add_argument("-t", "--Tpath", help = "path str of destination file for en
 parser.add_argument("-m", "--msg", help = "message string for encode operation")
 args = parser.parse_args()
 
-password = input().strip()
+password = input("password: ").strip()
 
 if args.operation == "":
     print(">>> Operation is not specified")
